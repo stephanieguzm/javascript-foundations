@@ -3,22 +3,18 @@ class Vampire {
     this.name = name;
     this.pet = pet || "bat";
     this.thirsty = true;
-    this.drinks = 0;
     this.ouncesDrank = 0;
   }
 
   drink() {
-    this.drinks = this.ouncesDrank += 10
-    console.log(this.drinks)
-    if (this.drinks >= 1) {
-      this.thirsty = false;
-    console.log(this.thirsty)
+    this.thirsty = false;
+    if (this.ouncesDrank < 50) {
+      this.ouncesDrank += 10
+    } else if (this.ouncesDrank >= 50) {
+      return "I\'m too full to drink anymore!"
     }
   }
-
 }
-
-
 
 
 module.exports = Vampire;
