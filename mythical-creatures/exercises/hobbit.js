@@ -13,26 +13,24 @@ class Hobbit {
     ++this.age
     if (this.age >= 33 && this.age <= 100) {
       this.adult = true
-    }
-    // if you want to add a second conditional, use else if
-    else if (this.age >= 101) {
+    } else if (this.age >= 101) {
       this.old = true
+  }
+}
+//use else if to add a second conditional.
 //you can also rewrite celebrateBirthday function to begin with
 //this.age >= 101 because anything past 101 value  will always be true
 //whereas lesser values must be manipulated more. this way you can set
 //subsequent conditionals that must be manipulated easier
 
-    }
-  }
 
 //'frodo' is the only value that should be true so start with a false
-// property value [line 8] 
+// property value [line 8]
   getRing() {
     if (this.name === "Frodo") {
       this.hasRing = true;
       return "Here is the ring!"
-    }
-    else {
+    } else {
       return "You can\'t have it!"
     }
   }
